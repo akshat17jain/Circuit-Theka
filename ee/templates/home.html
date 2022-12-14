@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %} HOME {% endblock %}
+
+{% block body %}
+
+
+<form action="" method="post" enctype="multipart/form-data">{% csrf_token%}
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 border-end border-dark">
+
+          <div class="container border">
+
+            <!--How to Use-->
+            <div class="row p-3">
+              <div class="col-md-12 border-bottom border-dark">
+                <h4 class="font-monospace fw-bold">How to Use ?</h4>
+              </div>
+            </div>
+
+            <!--Row-1-->
+            <div class="row  p-3">
+              <div class="col-md-12 border-bottom">
+                <ul class="list-unstyled">
+                  <li class="mb-1 font-monospace"><i class="fa-sharp fa-solid fa-1"></i>
+                    Suppose you want a circuit that converts 12V DC to 5V DC. 
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!--Row-2-->
+            <div class="row  p-3">
+              <div class="col-md-12 border-bottom">
+                <ul class="list-unstyled">
+                  <li class="mb-1 font-monospace"><i class="fa-sharp fa-solid fa-2"></i>
+                    You go to internet and search for its 
+                    <a href="https://www.nwengineeringllc.com/article/what-is-a-circuit-schematic.php#:~:text=A%20circuit%20schematic%20shows%20a,see%20in%20a%20circuit%20diagram.", 
+                    target="_blank">Schematic</a>. For ex:, Schematic for a circuit that converts 12V DC to 5V DC.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!--Row-3-->
+            <div class="row  p-3">
+              <div class="col-md-12 border-bottom">
+                <ul class="list-unstyled">
+                  <li class="mb-1 font-monospace"><i class="fa-sharp fa-solid fa-3"></i>
+                    You obtain a clear Schematic, download its image and then upload in the adjacent right column. Press the Submit pbutton and you will
+                    get your components.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+
+
+
+
+
+      <div class="col-md-8  mt-4 pt-5">
+
+        <div class="container mt-5 ">
+          <div class="row p-3 ">
+            <div class="col-md-12  align-items-center">
+              <!---<label for="formFileLg" class="form-label font-monospace fw-bold">Choose an image below.</label> --->
+              {{ form.as_p }}
+              <!---<input class="form-control form-control-lg border border-dark" id="formFileLg" type="image", name="image" > --->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 ms-3"><button type="submit" class="btn btn-outline-dark font-monospace" data-mdb-ripple-color="dark">SUMBIT</button></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</form>
+
+
+
+
+
+{% endblock %}
