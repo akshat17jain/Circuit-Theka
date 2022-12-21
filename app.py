@@ -114,8 +114,7 @@ if submit_image_button or st.session_state.submit_image_button_state :
             Img = "img\img.jpeg"
             
 	    ####################################################
-	    def ElelctronicEye(Img):
-		
+	def ElelctronicEye(Img):
 		img = cv2.imread(Img,cv2.IMREAD_GRAYSCALE)
 		print("Image loaded in model")
 		#kernel = np.ones((3,3),np.uint8)
@@ -203,7 +202,7 @@ if submit_image_button or st.session_state.submit_image_button_state :
 		components_final = components
 
 		return components_final
-		
+
 
 		
 	    ####################################################
