@@ -118,9 +118,9 @@ def ElelctronicEye(Img):
             if(result[0]==8):
                 components.append('Transistor')
 
-#         components_final = components
+        components_final = components
     
-    return components
+    return components_final
         
         
         
