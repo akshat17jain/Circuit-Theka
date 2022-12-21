@@ -212,8 +212,7 @@ if submit_image_button or st.session_state.submit_image_button_state :
             #initializing a session variable to store the fetched list of detected components
             if 'components' not in st.session_state:
                 st.session_state.components = []
-		
-	    components = ElelctronicEye(Img)
+            components = ElelctronicEye(Img)
 
             #storing the list of detected components in the respective session variable
             st.session_state.components = components
