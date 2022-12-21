@@ -29,6 +29,7 @@ json_file.close()
 loaded_model = model_from_json(loaded_model_json)
 # load weights into new model
 loaded_model.load_weights("model_final.h5")
+print("model loaded")
 
 
 
@@ -36,6 +37,7 @@ def ElelctronicEye(Img):
 
 
     img = cv2.imread(Img,cv2.IMREAD_GRAYSCALE)
+    print("Image loaded in model")
     #kernel = np.ones((3,3),np.uint8)
 
     #erosion = cv2.erode(img,kernel,iterations = 3)
