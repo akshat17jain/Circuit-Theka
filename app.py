@@ -113,10 +113,8 @@ if submit_image_button or st.session_state.submit_image_button_state :
             #loading the saved image
             Img = "img\img.jpeg"
             
-            
-            
 	    ####################################################
-	def ElelctronicEye(Img):
+	    def ElelctronicEye(Img):
 		
 		img = cv2.imread(Img,cv2.IMREAD_GRAYSCALE)
 		print("Image loaded in model")
