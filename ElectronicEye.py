@@ -120,7 +120,7 @@ def ElelctronicEye(Img):
             if(result[0]==8):
                 components.append('Transistor')
 
-        components_final = components
+        global components_final = components
     
     return components_final
         
