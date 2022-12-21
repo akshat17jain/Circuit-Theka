@@ -38,6 +38,7 @@ loaded_model.load_weights("model_final.h5")
 print("model loaded")
 
 def ElelctronicEye(Img):
+	
     img = cv2.imread(Img,cv2.IMREAD_GRAYSCALE)
     print("image loaded")
     #kernel = np.ones((3,3),np.uint8)
@@ -122,9 +123,9 @@ def ElelctronicEye(Img):
             if(result[0]==8):
                 components.append('Transistor')
 
-        components_final = components
+#         components_final = components
     
-    return components_final
+    return components
 	
 
 
@@ -207,10 +208,12 @@ if submit_image_button or st.session_state.submit_image_button_state :
 	    ####################################################
 	    #passing the image into Componet Detetcion function
             #and fetching list of detected components
-            components = ElelctronicEye(Img)
+            
             #initializing a session variable to store the fetched list of detected components
             if 'components' not in st.session_state:
                 st.session_state.components = []
+		
+	    components = ElelctronicEye(Img)
 
             #storing the list of detected components in the respective session variable
             st.session_state.components = components
